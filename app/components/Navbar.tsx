@@ -29,6 +29,11 @@ async function Navbar() {
             About
           </span>
         </Link>
+        <Link href={"/contact"}>
+          <span className="hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 bg-clip-text hover:text-transparent transition-all duration-200">
+            Contact Us
+          </span>
+        </Link>
 
         <SignedIn>
           <UserButton />
