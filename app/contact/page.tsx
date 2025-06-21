@@ -9,7 +9,6 @@ const ContactPage = () => {
     message: '',
   });
 
-  // Handler for input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({
       ...form,
@@ -17,7 +16,6 @@ const ContactPage = () => {
     });
   };
 
-  // Handler for form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const mailtoLink = `mailto:akashmourya9522@gmail.com?subject=Message from ${form.name}&body=Email: ${form.email}%0D%0A%0D%0A${form.message}`;
@@ -26,7 +24,6 @@ const ContactPage = () => {
 
   return (
     <div className='font-sans bg-gray-100 text-gray-800'>
-      {/* Hero Section */}
       <section className='flex flex-col items-center justify-center text-center py-16 px-8 bg-gray-100'>
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent'>
           Contact SleepTracker
@@ -36,7 +33,6 @@ const ContactPage = () => {
         </p>
       </section>
 
-      {/* Contact Form Section */}
       <section className='py-16 px-8 bg-white'>
         <h2 className='text-3xl font-bold text-center mb-8'>Get in Touch</h2>
         <form
@@ -97,7 +93,6 @@ const ContactPage = () => {
         </form>
       </section>
 
-      {/* Contact Information Section */}
       <section className='py-16 px-8 bg-gray-100'>
         <h2 className='text-3xl font-bold text-center mb-8'>
           Contact Information

@@ -1,5 +1,13 @@
-export default function Home() {
+import { currentUser } from "@clerk/nextjs/server";
+import Guest from "./components/Guest";
+
+export default async function Home() {
+ const user = await currentUser();
+ console.log(user);
+ 
   return (
-    <div >Home Page</div>
+    
+      !user ? <Guest /> : <div>hi</div>
+    
   );
 }
